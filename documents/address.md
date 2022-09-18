@@ -1,6 +1,8 @@
 ## province, district, subdistrct components
 
-เราจะทำด้วยวิธีที่ต่างกับคราวที่แล้ว โดยเราจะใช้ร้อยเข้ากับ react-hook-form และมีการใช้ FormProvider ในการส่งต่อข้อมูลระหว่าง component
+implement components สำหรับ จังหวัด อำเภอ ตำบล
+โดยใช้ `<select>` และ [react-hook-form](https://react-hook-form.com)
+และนำเทคนิค `Provider` มาช่วยในการส่งต่อข้อมูลระหว่าง component
 
 - หลักการ Provider, Context
 
@@ -192,7 +194,8 @@
     }
     ```
 
-  - ดึง function watch ออกจาก useFormContext
+  - จะเห็นว่า input อำเภอ ทำงานได้แล้ว แต่สิ่งที่แสดงยังแสดงอำเภอของทั้งประเทศอยู่ แสดงว่าเราต้อง filter ให้เหลือแต่อำเภอของจังหวัดที่ถูกเลือก
+  - ดึง function watch ออกจาก useFormContext เพื่อเอามาติดตามค่า จังหวัด ที่ user เลือก
 
     ```js
     const {
@@ -202,7 +205,7 @@
     } = useFormContext();
     ```
 
-  - เพิ่ม filter districts array ก่อนนำไป render เป็น option
+  - เพิ่ม filter districts array ตามรหัสจังหวัด ก่อนนำไป render เป็น option
 
     ```js
     {

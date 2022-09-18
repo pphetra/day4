@@ -1,6 +1,6 @@
-## ใช้ React-select เข้ามาช่วยทำ autocompleted
+## ใช้ React-select เข้ามาช่วยทำ autocompleted จังหวัด อำเภอ ตำบล
 
-[React Select Link](https://react-select.com/home)
+[React Select](https://react-select.com/home)
 
 ### สร้าง components/address/province-select.js
 
